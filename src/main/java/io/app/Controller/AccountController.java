@@ -18,6 +18,10 @@ public class AccountController {
 	@Autowired
 	private AccountServiceImpl service;
 
+	public ResponseEntity<String> Wecome(){
+		return new ResponseEntity<>("Welcome to First Bank",HttpStatus.OK);
+	}
+
 	//Add Account RestApi
 	@PostMapping
 	public ResponseEntity<AccountDto> addAccount(@RequestBody AccountDto accountDto){
